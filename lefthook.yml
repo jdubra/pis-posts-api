@@ -1,0 +1,7 @@
+pre-commit:
+  rubocop:
+    run: bundle exec rubocop
+  rails_best_practices:
+    run: bundle exec rails_best_practices
+  reek:
+    run: bundle exec reek

@@ -1,0 +1,5 @@
+rails_best_practices:
+  - add_rake_task
+  - check_controllers
+  - check_models
+  - check_migrations

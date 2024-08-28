@@ -1,0 +1,11 @@
+exclude_paths:
+  - "db/migrate"
+  - "bin"
+  - "node_modules"
+  - "vendor"
+
+checks:
+  DuplicateMethodCall:
+    enabled: true
+  IrresponsibleModule:
+    enabled: true
