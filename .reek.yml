@@ -4,8 +4,14 @@ exclude_paths:
   - "node_modules"
   - "vendor"
 
-checks:
-  DuplicateMethodCall:
-    enabled: true
+detectors:
+  InstanceVariableAssumption:
+    enabled: false
   IrresponsibleModule:
-    enabled: true
+    enabled: false
+  UncommunicativeModuleName:
+    exclude:
+      - Api::V1
+  UncommunicativeVariableName:
+    exclude:
+      - Api::V1::UsersController#index

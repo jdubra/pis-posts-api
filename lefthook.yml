@@ -1,7 +1,11 @@
 pre-commit:
-  rubocop:
-    run: bundle exec rubocop
-  rails_best_practices:
-    run: bundle exec rails_best_practices
-  reek:
-    run: bundle exec reek
+  parallel: true
+  commands:
+    rubocop:
+      run: bundle exec rubocop
+    reek:
+      run: bundle exec reek .
+    rails_best_practices:
+      run: bundle exec rails_best_practices
+    # test:
+    #   run: rspec spec

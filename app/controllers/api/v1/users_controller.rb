@@ -3,8 +3,10 @@
 module Api
   module V1
     class UsersController < ApplicationController
+      include RenderErrorHelper
+
       def create
-        @user = User.new(create_params)
+        @user = User.new(user_params)
         if @user.save
           render :show, status: :created
         else
@@ -28,7 +30,7 @@ module Api
 
       def update
         @user = User.find(params[:id])
-        if @user.update(create_params)
+        if @user.update(user_params)
           render :show, status: :ok
         else
           render_error(@user.errors.full_messages, :unprocessable_entity)
@@ -47,12 +49,7 @@ module Api
 
       private
 
-      def render_error(messages, status)
-        @messages = Array(messages)
-        render 'api/v1/shared/error', status:
-      end
-
-      def create_params
+      def user_params
         params.permit(:username, :email)
       end
     end
