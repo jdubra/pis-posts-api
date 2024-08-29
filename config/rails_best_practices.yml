@@ -24,7 +24,13 @@ RemoveEmptyHelpersCheck: {}
 #RemoveTabCheck: { }
 RemoveTrailingWhitespaceCheck: {}
 RemoveUnusedMethodsInControllersCheck:
-  { except_methods: [Api::V1::UsersController#user_params] }
+  {
+    except_methods:
+      [
+        Api::V1::UsersController#user_params,
+        Api::V1::PostsController#post_params,
+      ],
+  }
 RemoveUnusedMethodsInHelpersCheck: { except_methods: [] }
 RemoveUnusedMethodsInModelsCheck: { except_methods: [] }
 ReplaceComplexCreationWithFactoryMethodCheck: { attribute_assignment_count: 2 }

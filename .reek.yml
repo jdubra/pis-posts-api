@@ -15,3 +15,4 @@ detectors:
   UncommunicativeVariableName:
     exclude:
       - Api::V1::UsersController#index
+      - Api::V1::PostsController#index
