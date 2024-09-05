@@ -40,7 +40,7 @@ group :development, :test do
   gem 'rails_best_practices', '~> 1.23', '>= 1.23.2'
   gem 'reek', '~> 6.3'
   gem 'rspec-rails'
-  gem 'rubocop', '~> 1.65', '>= 1.65.1'
+  gem 'rubocop', '~> 1.66'
   # Static analysis for security vulnerabilities [https://brakemanscanner.org/]
   gem 'brakeman', require: false
 
