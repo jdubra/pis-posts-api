@@ -36,7 +36,7 @@ gem 'jbuilder', '~> 2.12'
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem 'debug', platforms: %i[mri windows], require: 'debug/prelude'
-  gem 'lefthook', '~> 1.7', '>= 1.7.14'
+  gem 'lefthook', '~> 1.7'
   gem 'rails_best_practices', '~> 1.23', '>= 1.23.2'
   gem 'reek', '~> 6.3'
   gem 'rspec-rails'
